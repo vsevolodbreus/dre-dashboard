@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+
+  dashboard:
+    image: '3b-partners/dre-dashboard:latest'
+    build:
+      context: .
+      dockerfile: dashboard.dockerfile
+    ports:
+      - "8501:8501"
+
+  sources:
+    image: '3b-partners/dre-sources:latest'
+    build:
+      context: .
+      dockerfile: sources.dockerfile
